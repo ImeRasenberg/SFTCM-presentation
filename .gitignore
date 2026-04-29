@@ -1,0 +1,10 @@
+/presentation/TEX/*.aux
+/presentation/TEX/*.bbl
+/presentation/TEX/*.blg
+/presentation/TEX/*.log
+/presentation/TEX/*.out
+/presentation/TEX/*.toc
+/presentation/TEX/*.synctex.gz
+/presentation/TEX/*.fls
+/presentation/TEX/*.fdb_latexmk
+/presentation/TEX/*.pdf
