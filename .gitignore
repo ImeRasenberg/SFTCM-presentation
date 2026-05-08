@@ -6,5 +6,5 @@
 /presentation/TEX/*.toc
 /presentation/TEX/*.synctex.gz
 /presentation/TEX/*.fls
-/presentation/TEX/*.fdb_latexmk
+/presentation/TEX/*.fdb_latexmkh
 /presentation/TEX/*.pdf
