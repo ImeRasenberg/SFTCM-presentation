@@ -8,3 +8,7 @@
 /presentation/TEX/*.fls
 /presentation/TEX/*.fdb_latexmkh
 /presentation/TEX/*.pdf
+
+/media
+/slides
+/presentation_assets

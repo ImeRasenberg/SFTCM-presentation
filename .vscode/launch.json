@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Manim Slides Render",
+            "type": "python",
+            "request": "launch",
+            "module": "manim_slides",
+            "args": [
+                "render",
+                "${file}",
+                "MyPresentation",
+                "--",
+                "-pqh"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
