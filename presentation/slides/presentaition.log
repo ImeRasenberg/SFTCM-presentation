@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2025/dev/Debian)  (format=lualatex 2026.2.3)  12 MAY 2026 13:10
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2025/dev/Debian)  (format=lualatex 2026.2.3)  12 MAY 2026 14:43
  restricted system commands enabled.
 **presentaition.tex
 (./presentaition.tex
@@ -727,12 +727,21 @@ Package: amsthm 2020/05/29 v2.20.6
 \beamer@dimb=\dimen293
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerouterthemedefault.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty
+Package: physics 
+
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
 File: l3backend-luatex.def 2024-05-08 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count343
 Inserting `l3color' in `luaotfload.parse_color'.
 \l__pdf_internal_box=\box77
-)
+))
+Package: xparse 2024-08-16 L3 Experimental document command parser
+))
 (./presentaition.aux)
 \openout1 = presentaition.aux
 
@@ -1195,11 +1204,11 @@ my insertion and my current dilemma will both disappear.
 
 [13
 
-]
+]) (./sections/FFLO.tex
 
 [14
 
-]) (./sections/FFLO.tex
+]
 
 [15
 
@@ -1207,21 +1216,17 @@ my insertion and my current dilemma will both disappear.
 
 [16
 
-]
+]) (./sections/EXP.tex
 
 [17
 
-]) (./sections/EXP.tex
+]
 
 [18
 
 ]
 
 [19
-
-]
-
-[20
 
 ])
 \tf@nav=\write6
@@ -1243,16 +1248,16 @@ Package rerunfilecheck Info: File `presentaition.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 21936 strings out of 475512
+ 22517 strings out of 475512
  100000,953878 words of node,token memory allocated
- 1386 words of node memory still in use:
+ 1390 words of node memory still in use:
    19 hlist, 9 vlist, 4 rule, 3 local_par, 35 glue, 4 kern, 10 penalty, 10 glyph
-, 73 attribute, 61 glue_spec, 73 attribute_list, 4 write, 10 pdf_colorstack node
+, 74 attribute, 61 glue_spec, 74 attribute_list, 4 write, 10 pdf_colorstack node
 s
-   avail lists: 2:586,3:364,4:201,5:219,6:61,7:1008,8:37,9:557,10:3,11:36
- 44196 multiletter control sequences out of 65536+600000
+   avail lists: 2:584,3:364,4:201,5:219,6:61,7:1008,8:37,9:557,10:3,11:36
+ 44764 multiletter control sequences out of 65536+600000
  46 fonts using 3553847 bytes
- 128i,14n,116p,387b,604s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,14n,116p,387b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/opentype/public/lm/lmsans8-oblique.otf></usr/share/texmf
 /fonts/opentype/public/lm/lmsans8-regular.otf></usr/share/texmf/fonts/opentype/p
 ublic/lm/lmsans10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-r
@@ -1265,10 +1270,10 @@ msfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on presentaition.pdf (20 pages, 106167 bytes).
+Output written on presentaition.pdf (19 pages, 106353 bytes).
 
-PDF statistics: 640 PDF objects out of 1000 (max. 8388607)
- 578 compressed objects within 6 object streams
- 44 named destinations out of 1000 (max. 131072)
+PDF statistics: 614 PDF objects out of 1000 (max. 8388607)
+ 553 compressed objects within 6 object streams
+ 42 named destinations out of 1000 (max. 131072)
  40 words of extra memory for PDF output out of 10000 (max. 100000000)
 
