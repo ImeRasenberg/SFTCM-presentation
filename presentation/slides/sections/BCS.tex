@@ -1,7 +1,17 @@
 \section{BCS}
 
 
-\begin{frame}{Pairing symmetry}
+\begin{frame}[plain]
+	\centering
+	\vfill
+	
+	{\fontsize{40}{40}\selectfont \textbf{BCS}}
+	
+	\vfill
+\end{frame}
+
+
+\begin{frame}{Singlet State}
 	
 	\begin{columns}[T]
 		
@@ -57,7 +67,7 @@
 		\only<5->{
 			\centering
 			\[
-				\langle V \rangle_t > \langle V \rangle_s
+				\langle V \rangle_{t} > \langle V \rangle_s
 			\]
 		}
 	\end{columns}
@@ -103,22 +113,87 @@
 			V^{-1}=\sum_{|k'|>k_F} (E-2\epsilon_k)^{-1}
 			\]
 		}
-		
-		
 \end{frame}
 
-%
-%\begin{frame}{Ground State}
 
-%\end{frame}
-
-
-\begin{frame}{Band Gap}
+\begin{frame}{Band Gap 1}
+	
+	% Step 1: fermionic action
 	\only<1->{
 		\[
-		\ket{BCS} = \prod_{k>k_{min}} (u_k + v_k \hat{c}_{k\uparrow}^{\dagger}\hat{c}_{-k\downarrow}^{\dagger})\ket{O}
+		S[\psi^*,\psi]
+		=
+		\int d\tau d^3x
+		\left[
+		\psi^*_\sigma
+		\left(\hbar \partial_\tau +
+		\epsilon_k
+		-\mu
+		\right)
+		\psi_\sigma
+		+
+		V_0\,
+		\psi^*_\uparrow
+		\psi^*_\downarrow
+		\psi_\downarrow
+		\psi_\uparrow
+		\right]
 		\]
-		\vspace{0.2cm}
-    }
+	}
+	
+	% Step 2: Hubbard-Stratonovich
+	\only<2->{
+		\[
+		\langle\Delta(x,\tau)\rangle
+		=
+		V_0\langle
+		\psi_\downarrow(x,\tau)\psi_\uparrow(x,\tau)
+		\rangle
+		\]
+		
+		\[
+		\psi^*_\uparrow\psi^*_\downarrow\psi_\downarrow\psi_\uparrow
+		\;\rightarrow\;
+		\frac{|\Delta|^2}{V_0}
+		-
+		\Delta\,\psi^*_\uparrow\psi^*_\downarrow
+		-
+		\Delta^*\,\psi_\downarrow\psi_\uparrow
+		\]
+	}
+	
+	% Step 3: quadratic effective action
+	\only<3->{
+		\[
+		S_{\mathrm{eff}}
+		=
+		\int d\tau d^3x
+		\left[
+		\frac{|\Delta|^2}{V_0}
+		+
+		\Psi^\dagger
+		\begin{pmatrix}
+			i\hbar\omega_n +\epsilon_k - \mu & \Delta \\
+			\Delta^* & -i\hbar\omega_n +\epsilon_k - \mu
+		\end{pmatrix}
+		\Psi
+		\right]
+		\]
+	}
 \end{frame}
 
+
+\begin{frame}{Band Gap 2}
+	\only<1->{
+		\[
+		\Omega(\Delta) = c_0 + c_2 |\Delta|^2 + c_4 |\Delta|^4 + \mathcal{O}\left(|\Delta|^6\right)
+		\]
+	}
+	\only<2->{
+		\[
+		\frac{1}{V_0} + \frac{1}{V}\sum_{k}\frac{1+2N(\epsilon_k)}{2(\epsilon_k-\mu)} 
+		= 0
+		\]
+	}
+
+\end{frame}

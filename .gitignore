@@ -9,6 +9,22 @@
 /presentation/TEX/*.fdb_latexmkh
 /presentation/TEX/*.pdf
 
+
+/presentation/slides/*.aux
+/presentation/slides/*.bbl
+/presentation/slides/*.blg
+/presentation/slides/*.log
+/presentation/slides/*.out
+/presentation/slides/*.toc
+/presentation/slides/*.synctex.gz
+/presentation/slides/*.fls
+/presentation/slides/*.fdb_latexmkh
+/presentation/slides/*.pdf
+/presentation/slides/*.nav
+/presentation/slides/*.snm
+
+
+
 /media
 /slides
 /presentation_assets
