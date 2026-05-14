@@ -132,7 +132,7 @@
 		\right)
 		\psi_\sigma
 		+
-		V_0\,
+		V\,
 		\psi^*_\uparrow
 		\psi^*_\downarrow
 		\psi_\downarrow
@@ -144,22 +144,29 @@
 	% Step 2: Hubbard-Stratonovich
 	\only<2->{
 		\[
-		\langle\Delta(x,\tau)\rangle
-		=
-		V_0\langle
-		\psi_\downarrow(x,\tau)\psi_\uparrow(x,\tau)
-		\rangle
-		\]
-		
-		\[
 		\psi^*_\uparrow\psi^*_\downarrow\psi_\downarrow\psi_\uparrow
 		\;\rightarrow\;
-		\frac{|\Delta|^2}{V_0}
+		\frac{|\Delta|^2}{V}
 		-
 		\Delta\,\psi^*_\uparrow\psi^*_\downarrow
 		-
 		\Delta^*\,\psi_\downarrow\psi_\uparrow
 		\]
+		
+		\[
+		\begin{split}
+			\langle\Delta(x,\tau)\rangle_x
+			&=
+			V\langle
+			\psi_\downarrow(x,\tau)\psi_\uparrow(x,\tau)
+			\rangle_x\\
+			&= V\langle
+			\psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau)
+			\rangle_k
+		\end{split}
+		\]
+		
+
 	}
 	
 	% Step 3: quadratic effective action

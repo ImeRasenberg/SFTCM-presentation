@@ -10,13 +10,34 @@
 
 
 \begin{frame}{Zeeman Splitting}
-	hello
+	\only<1->{
+		\[
+		\hspace*{-0.5cm}\mathcal{H} = \sum_{k}\left[h (\hat{n}_{k,\downarrow} - \hat{n}_{k,\uparrow}) + \sum_{\sigma}\epsilon_k \hat{n}_{k,\sigma}\right] 
+		+V\sum_{k}	\hat{c}_{\frac{q}{2}+k\uparrow}^{\dagger}\hat{c}_{\frac{q}{2}-k\downarrow}^{\dagger}\hat{c}_{\frac{q}{2}+k\uparrow}\hat{c}_{\frac{q}{2}-k\downarrow}
+		\]
+		\vspace{0.2cm}
+	}
+	\only<2->{
+		\[
+		\begin{split}
+			\langle\Delta(x,\tau)\rangle
+			&=
+			V\langle
+			\psi_{\frac{q}{2}-k \downarrow}(\tau)\psi_{\frac{q}{2}+k \uparrow}(\tau)
+			\rangle\\
+			&=\begin{cases}
+				\text{FF:} &
+				\langle \Delta_{\mathrm{BCS}}(x,\tau)e^{i q\cdot x}\rangle 
+				\\
+				\text{LO:} &
+				\langle \Delta_{\mathrm{BCS}}(x,\tau)\cos(q\cdot x)\rangle 
+			\end{cases}
+		\end{split}
+		\]
+	}
 \end{frame}
 
-\begin{frame}{Fermi shell}
-	hello
-\end{frame}
 
-\begin{frame}{New Auxiliary Field}
+\begin{frame}{Phase Diagram}
 	hello
 \end{frame}
