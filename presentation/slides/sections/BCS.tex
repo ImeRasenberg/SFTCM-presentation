@@ -78,41 +78,30 @@
 
 		\only<1->{
 			\[
-			\mathcal{H} = \sum_{k,\sigma} \epsilon_k \hat{n}_{k,\sigma} + \sum_{k,k'} V_{k,k'} 	\hat{c}_{k\uparrow}^{\dagger}\hat{c}_{-k\downarrow}^{\dagger}\hat{c}_{k'\uparrow}\hat{c}_{-k'\downarrow}
+			\mathcal{H} = \sum_{k,\sigma} \epsilon_k \hat{n}_{k,\sigma} + \sum_{k,k'} V_{k,k'} 	\hat{c}_{k\uparrow}^{\dagger}\hat{c}_{-k\downarrow}^{\dagger}\hat{c}_{-k'\downarrow}\hat{c}_{k'\uparrow}
 			\]
-			\vspace{0.2cm}
 		}
 		\only<2->{
 			\[
-			\Psi_s(\mathbf r_1,\mathbf r_2)
-			=
-			\psi_s(\mathbf r_1,\mathbf r_2)
-			\otimes
-			\chi_s(s_1,s_2)
+			\ket{\Psi} = \sum_k a_k \hat{c}_{k\uparrow}^{\dagger}\hat{c}_{-k\downarrow}^{\dagger} \ket{\text{FS}}
 			\]
-			\vspace{0.2cm}
 		}
 		\only<3->{
 			\[
-			\Psi_s(\mathbf r_1,\mathbf r_2)
-			=
-			\sum_{|k|>k_F} g_k \cos{k(r_1-r_2) }
-			\otimes
-			\chi_s(s_1,s_2)
+			(E-2\xi_k)a_k = \sum_{k'}V_{k,k'} a_{k'}
 			\]
-			\vspace{0.2cm}
+		}
+		\only<3->{
+			\[
+			1 = V\sum_{k}\frac{ 1}{2\xi-E} =  V \rho(0) \int_0^{\hbar \omega_D}\frac{ d\xi}{2\xi-E}
+			\]
 		}
 		\only<4->{
 			\[
-			(E-2\epsilon_k)g_k = \sum_{|k'|>k_F} V_{kk'}g_k'
+			E = -2\hbar \omega_D e^{-1/(V\rho(0))}
 			\]
 		}
 		
-		\only<5->{
-			\[
-			V^{-1}=\sum_{|k'|>k_F} (E-2\epsilon_k)^{-1}
-			\]
-		}
 \end{frame}
 
 
@@ -176,7 +165,7 @@
 		=
 		\int d\tau d^3x
 		\left[
-		\frac{|\Delta|^2}{V_0}
+		\frac{|\Delta|^2}{V}
 		+
 		\Psi^\dagger
 		\begin{pmatrix}

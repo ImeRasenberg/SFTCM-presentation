@@ -39,5 +39,31 @@
 
 
 \begin{frame}{Phase Diagram}
-	hello
+		\only<1->{
+			\[
+			S_{\mathrm{eff}}
+			=
+			\int d\tau d^3x
+			\left[
+			\frac{|\Delta|^2}{V}
+			+
+			\Psi^\dagger
+			\begin{pmatrix}
+				i\hbar\omega_n +\epsilon_k - \mu & \Delta \\
+				\Delta^* & -i\hbar\omega_n +\epsilon_k - \mu
+			\end{pmatrix}
+			\Psi
+			\right]
+			\]
+		}
+		\only<2->{
+			\[
+			S_{\mathrm{eff}} = V_0 \beta \frac{|\Delta|^2}{V} - \frac{1}{2}\mathrm{Tr}\log -\mathbf{G}_0^{-1} - \frac{1}{2}\mathrm{Tr}\log(1-\mathbf{G}_0 \Sigma)
+			\]
+		}
+		\only<3->{
+			\[
+			\langle \Delta_{\mathrm{BCS}}(x,\tau)\rangle >\langle \Delta_{\mathrm{BCS}}(x,\tau)\cos(q\cdot x)\rangle 
+			\]
+		}
 \end{frame}
