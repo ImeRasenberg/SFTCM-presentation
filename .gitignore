@@ -22,8 +22,10 @@
 /presentation/slides/*.pdf
 /presentation/slides/*.nav
 /presentation/slides/*.snm
-
-
+/presentation/slides/*.bcf
+/presentation/slides/*.xml
+/presentation/slides/*.vrb
+/presentation/slides/*.vrb
 
 /media
 /slides

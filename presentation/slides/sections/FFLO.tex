@@ -1,29 +1,33 @@
-\section{FFLO}
-\begin{frame}[plain]
-	\centering
-	\vfill
-	
-	{\fontsize{40}{40}\selectfont \textbf{FFLO}}
-	
-	\vfill
-\end{frame}
-
 
 \begin{frame}{Zeeman Splitting}
 	\only<1->{
 		\[
 		\hspace*{-0.5cm}\mathcal{H} = \sum_{k}\left[h (\hat{n}_{k,\downarrow} - \hat{n}_{k,\uparrow}) + \sum_{\sigma}\epsilon_k \hat{n}_{k,\sigma}\right] 
-		+V\sum_{k}	\hat{c}_{\frac{q}{2}+k\uparrow}^{\dagger}\hat{c}_{\frac{q}{2}-k\downarrow}^{\dagger}\hat{c}_{\frac{q}{2}+k\uparrow}\hat{c}_{\frac{q}{2}-k\downarrow}
+		+V\sum_{k}	\hat{c}_{k\uparrow}^{\dagger}\hat{c}_{-k\downarrow}^{\dagger}\hat{c}_{k\uparrow}\hat{c}_{-k\downarrow}
 		\]
 		\vspace{0.2cm}
 	}
 	\only<2->{
 		\[
+		\hspace*{-0.5cm}\mathcal{H} = \sum_{k}\left[h (\hat{n}_{k,\downarrow} - \hat{n}_{k,\uparrow}) + \sum_{\sigma}\epsilon_k \hat{n}_{k,\sigma}\right] 
+		+V\sum_{k}	\hat{c}_{q+k\uparrow}^{\dagger}\hat{c}_{-k\downarrow}^{\dagger}\hat{c}_{q+k\uparrow}\hat{c}_{-k\downarrow}
+		\]
+		\vspace{0.2cm}
+	}
+%		\only<2->{
+%		\[
+%		\hspace*{-0.5cm}\mathcal{H} = \sum_{k}\left[h (\hat{n}_{k,\downarrow} - \hat{n}_{k,\uparrow}) + \sum_{\sigma}\epsilon_k \hat{n}_{k,\sigma}\right] 
+%		+V\sum_{k}	\hat{c}_{\frac{q}{2}+k\uparrow}^{\dagger}\hat{c}_{\frac{q}{2}-k\downarrow}^{\dagger}\hat{c}_{\frac{q}{2}+k\uparrow}\hat{c}_{\frac{q}{2}-k\downarrow}
+%		\]
+%		\vspace{0.2cm}
+%	}
+	\only<3->{
+		\[
 		\begin{split}
 			\langle\Delta(x,\tau)\rangle
 			&=
 			V\langle
-			\psi_{\frac{q}{2}-k \downarrow}(\tau)\psi_{\frac{q}{2}+k \uparrow}(\tau)
+			\psi_{q-k \downarrow}(\tau)\psi_{k \uparrow}(\tau)
 			\rangle\\
 			&=\begin{cases}
 				\text{FF:} &
@@ -41,7 +45,7 @@
 \begin{frame}{Phase Diagram}
 		\only<1->{
 			\[
-			S_{\mathrm{eff}}
+			\hspace{-0.5cm}S_{\mathrm{eff}}
 			=
 			\int d\tau d^3x
 			\left[
@@ -49,8 +53,8 @@
 			+
 			\Psi^\dagger
 			\begin{pmatrix}
-				i\hbar\omega_n +\epsilon_k - \mu & \Delta \\
-				\Delta^* & -i\hbar\omega_n +\epsilon_k - \mu
+				i\hbar\omega_n +\epsilon_k - \mu + h & \Delta \\
+				\Delta^* & -i\hbar\omega_n +\epsilon_k - \mu - h
 			\end{pmatrix}
 			\Psi
 			\right]
@@ -63,7 +67,7 @@
 		}
 		\only<3->{
 			\[
-			\langle \Delta_{\mathrm{BCS}}(x,\tau)\rangle >\langle \Delta_{\mathrm{BCS}}(x,\tau)\cos(q\cdot x)\rangle 
+			\Delta_{\mathrm{BCS}}(x,\tau) \ge \Delta_{\mathrm{BCS}}(x,\tau)\cos(q\cdot x)
 			\]
 		}
 \end{frame}
