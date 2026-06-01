@@ -13,8 +13,9 @@
 \institute{Department of Information and Computing Sciences}
 \date{\today}
 
-
+\usepackage{braket}
 \usepackage{pgfplots}
+\usepackage{animate}
 \pgfplotsset{compat=1.18}
 
 \begin{document}
@@ -61,5 +62,13 @@
 \section{Experimental Evidence}
 % ===========================================
 \input{sections/EXP.tex}
+
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+
+\section{Conclusion}
+\input{sections/End.tex}
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 
 \end{document}

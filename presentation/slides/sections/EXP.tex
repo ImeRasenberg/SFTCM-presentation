@@ -2,25 +2,24 @@
 	\begin{itemize}
     \item Strongly type–II superconductors\\
      very large Ginzburg–Landau parameter $\kappa \equiv \lambda / \xi >> 1  $
-    \item large Maki parameter $\alpha_M$
+    \item large Maki parameter $\alpha_M$\\
+    $\alpha_M = \frac{\sqrt{2}H_{c2}^{orb}}{H_{c2}^P}$\\
+	$\alpha_M \geq 1$ limit is Pauli 
     \item  Very clean
     \item Anisotropies of the Fermi–surface and the gap function can stabilize the FFLO state.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Maki parameter}
-	$\alpha_M = \frac{\sqrt{2}H_{c2}^{orb}}{H_{c2}^P}$\\
-	$\alpha_M \geq 1$ limit is Pauli 
-\end{frame}
+
 
 \begin{frame}{Possible candidates}
 	\begin{itemize}
     \item heavy fermion super-conductors: $CeRu_2, UPd_2Al_3, UBe_{13}$ 
-    \item layered organic superconductors: $\kappa-(BEDT-TTF)_2Cu(NCS)_2$\\
+    \item layered organic super-conductors: $\kappa-(BEDT-TTF)_2Cu(NCS)_2$\\
   \end{itemize} 
 \end{frame}
 
-\begin{frame}{properties}
+\begin{frame}{heavy fermion super-conductors}
     \begin{columns}[T] 
         \begin{column}{0.45\textwidth}
             % Left column: the text
@@ -33,30 +32,29 @@
         \begin{column}{0.5\textwidth}
             % Right column: the figure
             \centering
-            \includegraphics[width=\textwidth]{afbeeldingen/Structure.jpg}
+            \includegraphics[width=0.65\textwidth]{afbeeldingen/ferm.jpg}
         \end{column}
     \end{columns}
 \end{frame}
 
 
-\begin{frame}{Phase diagram }
-	  \begin{columns}[T] 
-        \begin{column}{0.4\textwidth}
+\begin{frame}{layered organic super-conductors}
+    \begin{columns}[T] 
+        \begin{column}{0.45\textwidth}
             % Left column: the text
             \begin{itemize}
-                \item $H_P$ = 20.7 T
-                \item Narrow FFLO state above $H_P$
+                \item high clean limit
+                \item precise in-plane field alignment.
             \end{itemize}
         \end{column}
         
-        \begin{column}{0.6\textwidth}
+        \begin{column}{0.5\textwidth}
             % Right column: the figure
             \centering
-            \includegraphics[width=0.8\textwidth, angle=-90]{afbeeldingen/diagram.pdf}
+            \includegraphics[width=0.65\textwidth]{afbeeldingen/Structure.jpg}
         \end{column}
     \end{columns}
 \end{frame}
-
 
 \begin{frame}{NMR}
 	\begin{figure}
@@ -80,9 +78,21 @@
         \begin{column}{0.6\textwidth}
             % Right column: the figure
             \centering
-            \includegraphics[width= 0.95\textwidth]{afbeeldingen/res.jpg}
+            \includegraphics[width= 0.8\textwidth]{afbeeldingen/res.jpg}
         \end{column}
     \end{columns}
+\end{frame}
+
+\begin{frame}[c]{Bloch equation}
+    \centering
+    \animategraphics[loop,controls,autoplay,width=0.6\textwidth,trim=0 0 0 0.5mm,clip]{10}{frames/Bloch-}{0}{199}
+\end{frame}
+
+\begin{frame}{Bloch equation}
+    \begin{align*}
+        \frac{dM_z(t)}{dt} &= \gamma \left(\mathbf{M}(t) \times \mathbf{B}(t)\right)_z - \frac{M_z(t)- M_0}{T_1} \\
+        M_z(t) &= M_0 \left(1-e^{-\frac{t}{T_1}} \right)
+    \end{align*}
 \end{frame}
 
 \begin{frame}{relaxation time}
@@ -95,7 +105,7 @@
 				
             \end{itemize}
         \end{column}
-        
+
         \begin{column}{0.6\textwidth}
             % Right column: the figure
             \centering
@@ -104,3 +114,29 @@
     \end{columns}
 \end{frame}
 
+
+\begin{frame}{Phase diagram }
+	  \begin{columns}[T] 
+        \begin{column}{0.4\textwidth}
+            % Left column: the text
+            \begin{itemize}
+                \item $H_P$ = 20.7 T
+                \item Narrow FFLO state above $H_P$
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.6\textwidth}
+            % Right column: the figure
+            \centering
+            \includegraphics[width=0.8\textwidth, angle=-90]{afbeeldingen/diagram.pdf}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Other experiments}
+    \begin{itemize}
+        \item Decrease ultrasound velocity
+        \item increase thermal conductivity
+        \item second peak in  $\frac{dM}{dT}$
+    \end{itemize}
+\end{frame}
