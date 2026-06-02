@@ -21,7 +21,7 @@
 
 
 
-\begin{frame}{Phonon-mediated real-space potential}
+\begin{frame}{Potential}
 	
 	\begin{columns}
 		
@@ -79,7 +79,7 @@
 	
 \end{frame}
 
-\begin{frame}{Pairing momentum choice}
+\begin{frame}{Pairing momentum}
 	
 	\only<1->{
 	\[
@@ -97,7 +97,8 @@
 	\begin{split}
 		\mathcal{H}_e\ket{\text{BCS}} &=  E \ket{\text{BCS}}\\
 		&=  (\epsilon_k + \epsilon_{k'})\ket{\text{BCS}}\\
-		&=  (\epsilon_{Q+q} + \epsilon_{Q-q})\ket{\text{BCS}}
+		&=  (\epsilon_{Q+q} + \epsilon_{Q-q})\ket{\text{BCS}}\\
+		&=  (2\epsilon_{Q} + 2\epsilon_{q})\ket{\text{BCS}}\\
 	\end{split}
 	\]
 	}
@@ -109,68 +110,208 @@
 	}
 
 \end{frame}
+%
+%\begin{frame}{Band Gap}
+%	% Step 1: fermionic action
+%	\only<1->{
+%		\[
+%		S[\psi^*,\psi]
+%		=
+%		\int d\tau d^3x
+%		\left[
+%		\psi^*_\sigma
+%		\left(\hbar \partial_\tau +
+%		\epsilon_k
+%		-\mu
+%		\right)
+%		\psi_\sigma
+%		-		V\,
+%		\psi^*_\uparrow
+%		\psi^*_\downarrow
+%		\psi_\downarrow
+%		\psi_\uparrow
+%		\right]
+%		\]
+%	}
+%	
+%	% Step 2: Hubbard-Stratonovich
+%	\only<2->{
+%		\[
+%		\psi^*_\uparrow\psi^*_\downarrow\psi_\downarrow\psi_\uparrow
+%		\;\rightarrow\;
+%		\frac{|\Delta|^2}{V}
+%		-
+%		\Delta\,\psi^*_\uparrow\psi^*_\downarrow
+%		-
+%		\Delta^*\,\psi_\downarrow\psi_\uparrow
+%		\]
+%		
+%		\[
+%		\begin{split}
+%			\langle\Delta(x,\tau)\rangle_x
+%			&=
+%			V\langle
+%			\psi_\downarrow(x,\tau)\psi_\uparrow(x,\tau)
+%			\rangle_x\\
+%			&= V\langle
+%			\psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau)
+%			\rangle_k
+%		\end{split}
+%		\]
+%		
+%		
+%	}
+%	
+%	% Step 3: quadratic effective action
+%	\only<3->{
+%		\[
+%		S_{\mathrm{eff}}
+%		=
+%		\int d\tau d^3x
+%		\left[
+%		\frac{|\Delta|^2}{V}
+%		+
+%		\Psi^\dagger
+%		\begin{pmatrix}
+%			i\hbar\omega_n +\epsilon_k - \mu & \Delta \\
+%			\Delta^* & -i\hbar\omega_n +\epsilon_k - \mu
+%		\end{pmatrix}
+%		\Psi
+%		\right]
+%		\]
+%	}
+%\end{frame}
 
-\begin{frame}{Band Gap}
-	% Step 1: fermionic action
+%\begin{frame}{Band Gap}
+%	
+%	% Step 1: fermionic action
+%	\only<1->{
+%		\[
+%		S[\psi^*,\psi]
+%		=
+%		\sum_{k,\omega_n,\sigma}
+%		\psi^*_{k\sigma}
+%		\left(
+%		-i\hbar\omega_n
+%		+\epsilon_k
+%		-\mu
+%		\right)
+%		\psi_{k\sigma}
+%		-
+%		V
+%		\sum_{k,k'}
+%		\psi^*_{k,\uparrow}
+%		\psi^*_{-k,\downarrow}
+%		\psi_{-k',\downarrow}
+%		\psi_{k',\uparrow}
+%		\]
+%	}
+%	
+%	% Step 2: Hubbard-Stratonovich
+%	\only<2->{
+%		\[
+%		\psi^*_\uparrow
+%		\psi^*_\downarrow
+%		\psi_\downarrow
+%		\psi_\uparrow
+%		\;\rightarrow\;
+%		\frac{|\Delta|^2}{V}
+%		-
+%		\Delta
+%		\psi^*_{k,\uparrow}
+%		\psi^*_{-k,\downarrow}
+%		-
+%		\Delta^*
+%		\psi_{-k,\downarrow}
+%		\psi_{k,\uparrow}
+%		\]
+%		
+%		\[
+%		\langle \Delta \rangle
+%		=
+%		V
+%		\left\langle
+%		\psi_{-k,\downarrow}
+%		\psi_{k,\uparrow}
+%		\right\rangle
+%		\]
+%	}
+%	
+%	% Step 3: quadratic effective action
+%	\only<3->{
+%		\[
+%		S_{\mathrm{eff}}
+%		=
+%		\sum_{k,\omega_n}
+%		\Psi_k^\dagger
+%		\begin{pmatrix}
+%			-i\hbar\omega_n + \epsilon_k - \mu
+%			&
+%			\Delta
+%			\\
+%			\Delta^*
+%			&
+%			-i\hbar\omega_n - \epsilon_k + \mu
+%		\end{pmatrix}
+%		\Psi_k
+%		+
+%		\frac{|\Delta|^2}{V}
+%		\]
+%	}
+%	
+%\end{frame}
+
+
+%\begin{frame}{Band gap}
+%	\only<1->{
+%	\[
+%	\bra{\text{BCS}} \hat{\mathcal{H}}-\mu \hat{N} \ket{\text{BCS}} = 2 \sum_{k} (\epsilon_k -\mu) \sin 2 \theta_k + \Delta \cos 2 \theta_k
+%	\]
+%	\[
+%	\Delta = - \frac{V_0}{2V}\sum_{k'} \sin 2 \theta_{k'}
+%	\]
+%	}
+%\end{frame}
+
+
+\begin{frame}{Band gap}
 	\only<1->{
 		\[
 		S[\psi^*,\psi]
 		=
-		\int d\tau d^3x
-		\left[
-		\psi^*_\sigma
-		\left(\hbar \partial_\tau +
-		\epsilon_k
+		\sum_{k,\omega_n,\sigma}
+		\psi^*_{k\sigma}
+		\left(
+		-i\hbar\omega_n
+		+\epsilon_k
 		-\mu
 		\right)
-		\psi_\sigma
-		-		V\,
-		\psi^*_\uparrow
-		\psi^*_\downarrow
-		\psi_\downarrow
-		\psi_\uparrow
-		\right]
+		\psi_{k\sigma}
+		-
+		V
+		\sum_{k,k'}
+		\psi^*_{k,\uparrow}
+		\psi^*_{-k,\downarrow}
+		\psi_{-k',\downarrow}
+		\psi_{k',\uparrow}
 		\]
 	}
 	
-	% Step 2: Hubbard-Stratonovich
 	\only<2->{
 		\[
-		\psi^*_\uparrow\psi^*_\downarrow\psi_\downarrow\psi_\uparrow
-		\;\rightarrow\;
-		\frac{|\Delta|^2}{V}
-		-
-		\Delta\,\psi^*_\uparrow\psi^*_\downarrow
-		-
-		\Delta^*\,\psi_\downarrow\psi_\uparrow
+		\Delta \;\rightarrow\; \Delta + V \sum_k \psi_{k,\uparrow}
+		\psi_{-k,\downarrow}
 		\]
 		
 		\[
-		\begin{split}
-			\langle\Delta(x,\tau)\rangle_x
-			&=
-			V\langle
-			\psi_\downarrow(x,\tau)\psi_\uparrow(x,\tau)
-			\rangle_x\\
-			&= V\langle
-			\psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau)
-			\rangle_k
-		\end{split}
+		\Delta = V \sum_k \langle  \psi_{k,\uparrow}
+		\psi_{-k,\downarrow} \rangle
 		\]
-		
-		
 	}
 	
-	% Step 3: quadratic effective action
 	\only<3->{
 		\[
-		S_{\mathrm{eff}}
-		=
-		\int d\tau d^3x
-		\left[
-		\frac{|\Delta|^2}{V}
-		+
-		\Psi^\dagger
+		S_{\mathrm{eff}}=\int d\tau d^3x\left[\frac{|\Delta|^2}{V}+\Psi^\dagger
 		\begin{pmatrix}
 			i\hbar\omega_n +\epsilon_k - \mu & \Delta \\
 			\Delta^* & -i\hbar\omega_n +\epsilon_k - \mu
@@ -178,5 +319,6 @@
 		\Psi
 		\right]
 		\]
+
 	}
 \end{frame}

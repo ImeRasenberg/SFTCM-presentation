@@ -2,7 +2,7 @@
 	\only<1->{
 		\[
 		\hspace*{-0.5cm}\mathcal{H} = \sum_{k}\left[h (\hat{n}_{k,\downarrow} - \hat{n}_{k,\uparrow}) + \sum_{\sigma}\epsilon_k \hat{n}_{k,\sigma}\right] 
-		+V\sum_{k}	\hat{c}_{k\uparrow}^{\dagger}\hat{c}_{-k\downarrow}^{\dagger}\hat{c}_{k\uparrow}\hat{c}_{-k\downarrow}
+		-V\sum_{k,k'}\psi^*_{k,\uparrow}\psi^*_{-k,\downarrow}\psi_{-k',\downarrow}\psi_{k',\uparrow}
 		\]
 		\vspace{0.2cm}
 	}
@@ -177,12 +177,12 @@
 	
 \end{frame}
 
-\begin{frame}{Order parameter}
+\begin{frame}{Auxiliary field}
 	\only<1->{
 	\[
-	\Delta_{BCS} = V\langle
+	\Delta_{BCS} = V\sum_k \langle
 	\psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau)
-	\rangle_k
+	\rangle
 	\]
 	}
 	
@@ -190,8 +190,8 @@
 	\[
 	\begin{split}
 		\Delta_{FF} &= 
-		V\langle \psi_{\downarrow,Q+k}(\tau)\psi_{\uparrow,Q-k}(\tau) \rangle_k\\
-		&= V\langle \psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau) \rangle_k\  e^{iQr}\\
+		V\sum_k \langle \psi_{\downarrow,Q+k}(\tau)\psi_{\uparrow,Q-k}(\tau) \rangle\\
+		&= V\sum_k \langle \psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau) \rangle\  e^{iQr}\\
 		&= \Delta_{BCS}\  e^{iQr}
 	\end{split}
 	\]
