@@ -161,7 +161,7 @@
 				% vector Q
 				\only<3>{
 					\draw[->, thick, black] (Cbig) -- (Csmall)
-					node[midway, above] {$\mathbf{Q}$};
+					node[midway, above] {$\mathbf{Q}$};c
 				}
 				\only<4->{
 					\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
@@ -176,3 +176,163 @@
 	\end{columns}
 	
 \end{frame}
+
+\begin{frame}{Order parameter}
+	\only<1->{
+	\[
+	\Delta_{BCS} = V\langle
+	\psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau)
+	\rangle_k
+	\]
+	}
+	
+	\only<2>{
+	\[
+	\begin{split}
+		\Delta_{FF} &= 
+		V\langle \psi_{\downarrow,Q+k}(\tau)\psi_{\uparrow,Q-k}(\tau) \rangle_k\\
+		&= V\langle \psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau) \rangle_k\  e^{iQr}\\
+		&= \Delta_{BCS}\  e^{iQr}
+	\end{split}
+	\]
+	}
+	\only<3->{
+		\[
+		\Delta_{FF} = \Delta_{BCS}\  e^{iQr}
+		\]
+	}
+	\only<3->{
+		\[
+		\Delta_{LO} = \sum_{j} \Delta_{BCS}\  e^{iQ_jr}
+		\]
+	}
+\end{frame}
+
+\begin{frame}{Energy Competition}
+	\begin{columns}
+		\column{0.33\linewidth}
+		\centering
+		{\textbf{BCS}}\\
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=5.5cm,
+				height=5cm,
+				xmin=-2, xmax=2,
+				ymin=0, ymax=4,
+				axis lines=middle,
+				xlabel={$k$},
+				ylabel={$E(k)$},
+				xtick=\empty,
+				ytick=\empty,
+				xlabel style={at={(ticklabel* cs:1)}, anchor=west},
+				ylabel style={at={(ticklabel* cs:1)}, anchor=south},
+				clip=false
+				]
+				
+				% Spin Up Band: Red Solid (Shifted Down in Energy)
+				\addplot[very thick, red, domain=-1.8:1.8, samples=100] {x^2 + 0.1};
+				\node[very thick, red, anchor=west] at (axis cs:1.2,1.8) {$\uparrow$};
+				
+				% Spin Down Band: Blue Solid (Shifted Up in Energy)
+				\addplot[very thick, blue, domain=-1.6:1.6, samples=100] {x^2 + 1.1};
+				\node[very thick, blue, anchor=east] at (axis cs:-1.2,2.8) {$\downarrow$};
+				
+				% Fermi Level
+				\draw[dashed, black, thick] (-2,2.1) -- (2,2.1) node[right, black] {$E_F$};
+				
+				% Fermi Level
+					\draw[dashed, black, thick] (-1.22,0) -- (-1.22,4);
+					\draw[dashed, black, thick] (1.22,0) -- (1.22,4);
+				
+				% Splitting Arrow (Fixed 'top, right' node position error)
+				\draw[<->, thick, purple] (0,0.1) -- (0,1.1);
+				\node[purple, anchor=west] at (axis cs:0,0.8) {$\Delta E$};
+				
+			\end{axis}
+		\end{tikzpicture}
+		
+		
+		\column{0.33\linewidth}
+		\centering
+		{\textbf{FF}}\\
+		\begin{tikzpicture}
+			
+			% parameters (changed radii)
+			\def\Rbig{1.9}
+			\def\Rsmall{0.6}
+			
+			% place centers so circles touch:
+			% distance = Rbig - Rsmall (inner tangent)
+			\pgfmathsetmacro{\d}{\Rbig - \Rsmall}
+			
+			\coordinate (Cbig) at (0,0);
+			\coordinate (Csmall) at (\d,0);
+			
+			% big circle (spin up)
+			\draw[very thick, red] (Cbig) circle (\Rbig);
+			\node[red] at (0,\Rbig+0.2) {$\uparrow$};
+			
+			% small circle (spin down)
+			\draw[very thick, blue] (Csmall) circle (\Rsmall);
+			\node[blue] at (\d,-\Rsmall-0.2) {$\downarrow$};
+			
+
+
+			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+			minimum width=0.2cm, minimum height=0.5cm] at (\Rbig,0) {};
+			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+			minimum width=0.2cm, minimum height=0.5cm] at (\Rsmall+0.1,0) {};
+
+			
+		\end{tikzpicture}
+		
+		
+		\column{0.33\linewidth}
+		
+		\centering
+		{\textbf{LO}}\\
+		\begin{tikzpicture}
+			
+			% parameters (changed radii)
+			\def\Rbig{1.9}
+			\def\Rsmall{0.6}
+			
+			% place centers so circles touch:
+			% distance = Rbig - Rsmall (inner tangent)
+			\pgfmathsetmacro{\d}{\Rbig - \Rsmall}
+			
+			\coordinate (Cbig) at (0,0);
+			\coordinate (Csmall) at (\d,0);
+			
+			% big circle (spin up)
+			\draw[very thick, red] (Cbig) circle (\Rbig);
+			\node[red] at (0,\Rbig+0.2) {$\uparrow$};
+			
+			% small circle (spin down)
+			\draw[very thick, blue] (Csmall) circle (\Rsmall);
+			\node[blue] at (\d,-\Rsmall-0.2) {$\downarrow$};
+			
+			% small circle (spin down)
+			\draw[very thick, blue] (-\d,0) circle (\Rsmall);
+			\node[blue] at (-\d,-\Rsmall-0.2) {$\downarrow$};
+			
+			
+			
+			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+			minimum width=0.2cm, minimum height=0.5cm] at (\Rbig,0) {};
+			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+			minimum width=0.2cm, minimum height=0.5cm] at (\Rsmall+0.1,0) {};
+			
+			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+			minimum width=0.2cm, minimum height=0.5cm] at (-\Rbig,0) {};
+			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+			minimum width=0.2cm, minimum height=0.5cm] at (-\Rsmall-0.1,0) {};
+			
+			
+		\end{tikzpicture}
+		
+	\end{columns}
+	
+\end{frame}
+
+
