@@ -1,0 +1,182 @@
+\begin{frame}{Attractive potential}
+	\only<1->{
+	\[
+	S = S_{e} + S_{e-e} + S_{ph} + S_{e-ph}
+	\]
+	}
+	
+	\only<2->{
+	\[
+	S = S_{e} + S_{e-e} +\sum_{q} (\omega_n^2 + \omega_q^2) \psi_q^\dagger \psi_q + \sum_{q,k,\sigma} g_q c^\dagger_{k+q,\sigma} c_{k,\sigma}(\psi_q + \psi_{-q}^\dagger)
+	\]
+	}
+	
+	\only<3->{
+	\[
+	S = S_{e} + S_{e-e}+ \frac{1}{2}\sum_q \frac{|g_q|^2}{\omega^2 - \omega_q^2} c^\dagger_{k+q,\sigma} c_{k,\sigma}c^\dagger_{k-q,\sigma} c_{k,\sigma}
+	\]
+	}
+	
+\end{frame}
+
+
+
+\begin{frame}{Phonon-mediated real-space potential}
+	
+	\begin{columns}
+		
+		% =========================
+		% LEFT SIDE: PLOT
+		% =========================
+		\column{0.5\textwidth}
+		\centering
+		
+		\begin{tikzpicture}
+			\begin{axis}[
+				width=0.95\linewidth,
+				height=6cm,
+				xlabel={$r$},
+				ylabel={$V_{\mathrm{eff}}$},
+				xmin=0.3, xmax=2,
+				samples=400,
+				domain=0.3:4,
+				axis lines=middle,
+				yticklabel=\empty,
+				xticklabel=\empty,
+				]
+				
+				\addplot[thick, blue] {(cos(deg(4*x)))/(x^3)};
+				
+			\end{axis}
+		\end{tikzpicture}
+		
+		% =========================
+		% RIGHT SIDE: TEXT + OVERLAYS
+		% =========================
+		\column{0.5\textwidth}
+		
+		\only<2->{
+			\[
+			\Psi(\mathbf r_1,\mathbf r_2)
+			=
+			\psi(\mathbf r_1,\mathbf r_2)
+			\otimes
+			\chi(s_1,s_2)
+			\]
+		}
+		\only<3->{
+			\[
+			\Psi(1,2)=-\Psi(2,1)
+			\]
+		}
+		\only<4->{
+			\centering
+			\[
+			\langle V \rangle_{t} > \langle V \rangle_s
+			\]
+		}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}{Pairing momentum choice}
+	
+	\only<1->{
+	\[
+	\ket{\text{BCS}} = \prod (u_k+v_k c^\dagger_{k,\downarrow}c^\dagger_{k',\uparrow})\ket{\text{FS}}
+	\]
+	}
+	\only<2->{
+	\[
+	\mathcal{H}_e  = \sum_{q,\sigma} \epsilon_q \hat{n}_{q,\sigma} 
+%	+ \sum_{k,k'} V_{k,k'} 	\hat{c}_{k\uparrow}^{\dagger}\hat{c}_{-k\downarrow}^{\dagger}\hat{c}_{-k'\downarrow}\hat{c}_{k'\uparrow}
+	\]
+	}
+	\only<3->{
+	\[
+	\begin{split}
+		\mathcal{H}_e\ket{\text{BCS}} &=  E \ket{\text{BCS}}\\
+		&=  (\epsilon_k + \epsilon_{k'})\ket{\text{BCS}}\\
+		&=  (\epsilon_{Q+q} + \epsilon_{Q-q})\ket{\text{BCS}}
+	\end{split}
+	\]
+	}
+	\only<4->{
+		\[
+	\mathcal{H}  = \sum_{q,\sigma} \epsilon_q \hat{n}_{q,\sigma} 
+	+ \sum_{k,k'} V_{k,k'} 	\hat{c}_{k\uparrow}^{\dagger}\hat{c}_{-k\downarrow}^{\dagger}\hat{c}_{-k'\downarrow}\hat{c}_{k'\uparrow}
+	\]
+	}
+
+\end{frame}
+
+\begin{frame}{Band Gap}
+	% Step 1: fermionic action
+	\only<1->{
+		\[
+		S[\psi^*,\psi]
+		=
+		\int d\tau d^3x
+		\left[
+		\psi^*_\sigma
+		\left(\hbar \partial_\tau +
+		\epsilon_k
+		-\mu
+		\right)
+		\psi_\sigma
+		-		V\,
+		\psi^*_\uparrow
+		\psi^*_\downarrow
+		\psi_\downarrow
+		\psi_\uparrow
+		\right]
+		\]
+	}
+	
+	% Step 2: Hubbard-Stratonovich
+	\only<2->{
+		\[
+		\psi^*_\uparrow\psi^*_\downarrow\psi_\downarrow\psi_\uparrow
+		\;\rightarrow\;
+		\frac{|\Delta|^2}{V}
+		-
+		\Delta\,\psi^*_\uparrow\psi^*_\downarrow
+		-
+		\Delta^*\,\psi_\downarrow\psi_\uparrow
+		\]
+		
+		\[
+		\begin{split}
+			\langle\Delta(x,\tau)\rangle_x
+			&=
+			V\langle
+			\psi_\downarrow(x,\tau)\psi_\uparrow(x,\tau)
+			\rangle_x\\
+			&= V\langle
+			\psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau)
+			\rangle_k
+		\end{split}
+		\]
+		
+		
+	}
+	
+	% Step 3: quadratic effective action
+	\only<3->{
+		\[
+		S_{\mathrm{eff}}
+		=
+		\int d\tau d^3x
+		\left[
+		\frac{|\Delta|^2}{V}
+		+
+		\Psi^\dagger
+		\begin{pmatrix}
+			i\hbar\omega_n +\epsilon_k - \mu & \Delta \\
+			\Delta^* & -i\hbar\omega_n +\epsilon_k - \mu
+		\end{pmatrix}
+		\Psi
+		\right]
+		\]
+	}
+\end{frame}
