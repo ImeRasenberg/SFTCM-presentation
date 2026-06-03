@@ -164,7 +164,7 @@
 					node[midway, above] {$\mathbf{Q}$};c
 				}
 				\only<4->{
-					\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+					\node[draw, fill=red, fill opacity=0.2, text opacity=1,
 					minimum width=0.2cm, minimum height=0.5cm] at (\Rbig,0) {};
 					\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
 					minimum width=0.2cm, minimum height=0.5cm] at (\Rsmall+0.1,0) {};
@@ -172,7 +172,6 @@
 				
 			\end{tikzpicture}
 		}
-		
 	\end{columns}
 	
 \end{frame}
@@ -190,8 +189,8 @@
 	\[
 	\begin{split}
 		\Delta_{FF} &= 
-		V\sum_k \langle \psi_{\downarrow,Q+k}(\tau)\psi_{\uparrow,Q-k}(\tau) \rangle\\
-		&= V\sum_k \langle \psi_{\downarrow,k}(\tau)\psi_{\uparrow,-k}(\tau) \rangle\  e^{iQr}\\
+		V\sum_k \langle \psi_{\downarrow,Q-k}(\tau)\psi_{\uparrow,k}(\tau) \rangle\\
+		&= V\sum_k \langle \psi_{\downarrow,-k}(\tau)\psi_{\uparrow,k}(\tau) \rangle\  e^{iQr}\\
 		&= \Delta_{BCS}\  e^{iQr}
 	\end{split}
 	\]
@@ -278,7 +277,7 @@
 			
 
 
-			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+			\node[draw, fill=red, fill opacity=0.2, text opacity=1,
 			minimum width=0.2cm, minimum height=0.5cm] at (\Rbig,0) {};
 			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
 			minimum width=0.2cm, minimum height=0.5cm] at (\Rsmall+0.1,0) {};
@@ -318,12 +317,12 @@
 			
 			
 			
-			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+			\node[draw, fill=red, fill opacity=0.2, text opacity=1,
 			minimum width=0.2cm, minimum height=0.5cm] at (\Rbig,0) {};
 			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
 			minimum width=0.2cm, minimum height=0.5cm] at (\Rsmall+0.1,0) {};
 			
-			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
+			\node[draw, fill=red, fill opacity=0.2, text opacity=1,
 			minimum width=0.2cm, minimum height=0.5cm] at (-\Rbig,0) {};
 			\node[draw, fill=blue, fill opacity=0.2, text opacity=1,
 			minimum width=0.2cm, minimum height=0.5cm] at (-\Rsmall-0.1,0) {};

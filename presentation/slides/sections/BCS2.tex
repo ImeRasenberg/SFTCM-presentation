@@ -37,16 +37,15 @@
 				height=6cm,
 				xlabel={$r$},
 				ylabel={$V_{\mathrm{eff}}$},
-				xmin=0.3, xmax=2,
+				xmin=0.8, xmax=2.5,
+				ymin=-0.5, ymax=1,
 				samples=400,
-				domain=0.3:4,
+				domain=0.8:4,
 				axis lines=middle,
 				yticklabel=\empty,
 				xticklabel=\empty,
 				]
-				
-				\addplot[thick, blue] {(cos(deg(4*x)))/(x^3)};
-				
+				\addplot[thick, blue] {1/x^(12)-1/x^(6)};
 			\end{axis}
 		\end{tikzpicture}
 		
